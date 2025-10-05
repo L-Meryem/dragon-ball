@@ -17,7 +17,6 @@ function getCharacters() {
             race.innerText = characterOne.race;
             img.src = characterOne.image;
             img.alt = characterOne.name;
-            description.innerText = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident eaque corporis fugiat, excepturi, alias nulla incidunt blanditiis explicabo accusamus, rerum quos eligendi rem. Laborum, ducimus tenetur praesentium eveniet cumque sequi?';
 
             //Translate the description
             const srcLang = 'auto';
@@ -40,7 +39,6 @@ function getCharacters() {
                     race.innerText = characterTwo.race;
                     img.src = characterTwo.image;
                     img.alt = characterTwo.name;
-                    description.innerText = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident eaque corporis fugiat, excepturi, alias nulla incidunt blanditiis explicabo accusamus, rerum quos eligendi rem. Laborum, ducimus tenetur praesentium eveniet cumque sequi?';
 
                     //Translate the description
                     const srcLang = 'auto';
