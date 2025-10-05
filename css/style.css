@@ -27,8 +27,9 @@ body {
 
 main {
   margin-top: 50px;
-  width: 80%;
+  width: 90%;
   margin: 20px auto;
+  position: relative;
 }
 
 /******************************************
@@ -39,26 +40,25 @@ main {
   margin: auto;
   grid-template-columns: 1fr 1fr;
   font-size: 2rem;
-  gap: 20px;
-
+  border: 5px solid black;
+  box-shadow: 5px 5px gray;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid black;
-  box-shadow: 10px 5px gray;
   text-align: center;
   justify-content: space-between;
-  max-width: 448px;
   min-width: 411px;
+  
 }
 
 .profile {
-  border-bottom: 2px solid black;
+  border: 2px solid black;
   width: 100%;
   padding: 10px 5px;
+  background-color: white;
 }
 
 .profile span {
@@ -71,34 +71,71 @@ main {
   display: block;
 }
 
-.image {
-  width: auto;
+.img-container {
+  width: 100%;
   height: 20rem;
+  position: relative;
+}
+
+.image {
+  position: absolute;
+  height: 80%;
   margin: 20px 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Stack overflow, center an absolute elem */
+}
+
+.image:hover{
+  height: 23rem;
 }
 
 .description {
   font-size: 1rem;
   padding: 10px 5px;
-  background-color: rgba(128, 128, 128, 0.097);
-  border-top: 2px solid black;
-}
-
-
-.description {
-  font-size: 1rem;
+  background-color: white;
+  border: 2px solid black;
   text-align: justify;
-  padding: 10px;
+  padding: 20px;
   color: gray;
   display: block;
   width: 100%;
-  margin-top: 5px;
-  height: 22rem;
+  min-height: 20rem;
+}
+
+.win {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 10px;
+}
+
+main > div{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+button{
+  font-size: 1.4rem;
+  padding: 10px;
+  border: 2px solid black;
+  box-shadow: 5px 5px gray;
+  background-color: rgb(121, 40, 40);
+  color: white;
+  margin-bottom: 5px;
+  min-width: 10rem;
+  height: fit-content;
 }
 
 @media screen and (max-width:980px) {
   .cards {
     grid-template-columns: 1fr;
     place-self: center;
+  }
+
+  main div{
+    flex-direction: column;
+    align-items: center;
+    min-width: 415px;
   }
 }
