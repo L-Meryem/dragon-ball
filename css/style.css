@@ -1,0 +1,104 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+main {
+  margin-top: 50px;
+  width: 80%;
+  margin: 20px auto;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+.cards {
+  display: grid;
+  margin: auto;
+  grid-template-columns: 1fr 1fr;
+  font-size: 2rem;
+  gap: 20px;
+
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid black;
+  box-shadow: 10px 5px gray;
+  text-align: center;
+  justify-content: space-between;
+  max-width: 448px;
+  min-width: 411px;
+}
+
+.profile {
+  border-bottom: 2px solid black;
+  width: 100%;
+  padding: 10px 5px;
+}
+
+.profile span {
+  font-size: 1rem;
+  color: gray;
+  margin-top: 10px;
+}
+
+.race {
+  display: block;
+}
+
+.image {
+  width: auto;
+  height: 20rem;
+  margin: 20px 0;
+}
+
+.description {
+  font-size: 1rem;
+  padding: 10px 5px;
+  background-color: rgba(128, 128, 128, 0.097);
+  border-top: 2px solid black;
+}
+
+
+.description {
+  font-size: 1rem;
+  text-align: justify;
+  padding: 10px;
+  color: gray;
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  height: 22rem;
+}
+
+@media screen and (max-width:980px) {
+  .cards {
+    grid-template-columns: 1fr;
+    place-self: center;
+  }
+}
